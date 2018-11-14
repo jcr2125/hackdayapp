@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { Card } from 'semantic-ui-react';
 
 export default class ResultCard extends Component{
     render(){
         return(
-            <div>
-                <h4>I am a single card</h4>
-            </div>
+                <div>
+                    <Card>
+                        <h4>{this.props.case_number}</h4>
+                    </Card>
+                </div>
         )
     }
 }

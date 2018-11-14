@@ -30,3 +30,8 @@
     transform: rotate(360deg);
   }
 }
+
+.search_bar {
+  background-color: aquamarine;
+  height: 100%;
+}
