@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import ResultCard from './result_card';
-import { Card } from 'semantic-ui-react';
-
 
 export default class ResultCards extends Component{
 
@@ -13,12 +11,8 @@ export default class ResultCards extends Component{
     
     render(){
         return(
-            <div>
-                <h2>ResultCards</h2>
-                <Card.Group centered> 
-                    {this.generateCards(this.props.case_numbers)}
-                </Card.Group>
-                
+            <div className="ui cards top-padding">
+                {this.generateCards(this.props.case_numbers)}  
             </div>
         )
     }

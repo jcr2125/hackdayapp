@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { Card } from 'semantic-ui-react';
+// import '../App.css'
 
 export default class ResultCard extends Component{
     render(){
         return(
-                <div>
-                    <Card>
-                        <h4>{this.props.case_number}</h4>
-                    </Card>
+                <div className="card">
+                    <div className="content">
+                        <div className="header">Case No. {this.props.case_number}</div>
+                    </div>
                 </div>
         )
     }

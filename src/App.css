@@ -34,4 +34,18 @@
 .search_bar {
   background-color: aquamarine;
   height: 100%;
+  padding-bottom: 50px;
+  padding-top: 100px;
+}
+
+.font {
+  font-family: 'Montserrat', sans-serif;
+
+}
+.result_card {
+  height: 200px;
+}
+
+.top-padding {
+  padding-top: 50px;
 }
