@@ -11,11 +11,16 @@ export default class SearchCard extends Component{
       }
 
     handleChange = (e) => {
-        e.preventDefault()
         this.setState({
             searching: e.target.value
         })
 
+        // console.log("state");
+        // console.log(this.state);
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault()
         if(this.state.searching.trim() === ""){
             this.setState({
                 display: false
@@ -26,23 +31,25 @@ export default class SearchCard extends Component{
                 display: true
             })
         }
-        console.log("state");
-        
-        console.log(this.state);
+        // console.log("submit");
+        // console.log(e.target.searching.value);
     }
 
     render(){
         return (
             <div>
                 <div>
-                    <h1>Search Card</h1>
-                    <label>
-                        What would you like to Search for?
-                    </label>
-                    <input type="text" name="searching" value={this.state.searching} onChange={this.handleChange}/>
-                    <input type="submit" name="Submit"/>
+                    <form onSubmit={this.handleSubmit}>
+                        <h1>Search Card</h1>
+                        <label>
+                            What would you like to Search for?
+                        </label>
+                        <input type="text" name="searching" value={this.state.searching} onChange={this.handleChange}/>
+                        <input type="submit" name="Submit"/>
+                    </form>
                 </div>
-                {/* <ResultCards searching={this.state.searching}/> */}
+                {this.state.display == true ? <ResultCards searching={this.state.searching}/> : <h3>Try typing something into the search bar</h3>}
+                
             </div>
         )
     }
