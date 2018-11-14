@@ -49,7 +49,7 @@ export default class SearchCard extends Component{
                     <form onSubmit={this.handleSubmit} className="ui form">
                         <h1>Decision Searchr</h1>
                         <p>What would you like to search for?</p>
-                        <input className="ui input focus" type="text" name="search_term" value={this.state.search_term} onChange={this.handleChange} />
+                        <input className="ui input focus" type="text" name="search_term" placeholder="What would you like to search for?" value={this.state.search_term} onChange={this.handleChange} />
                         <p/>
                         <Button content="submit" onClick={this.handleSubmit}/>
                     </form>
