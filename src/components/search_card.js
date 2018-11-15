@@ -38,10 +38,6 @@ export default class SearchCard extends Component{
                 case_numbers: [...results]
             })
         }
-
-        
-
-
         console.log("submit");
         console.log(this.state);
     }
@@ -50,16 +46,16 @@ export default class SearchCard extends Component{
         return (
             <div>
                 <div className="search_bar">
-                    <form onSubmit={this.handleSubmit}>
-                        <h1>Search Card</h1>
-                        <label>
-                            What would you like to Search for?
-                        </label>
-                        <Input type="text" name="search_term" value={this.state.search_term} onChange={this.handleChange} icon={<Icon name='search' inverted circular link />}/>
+                    <form onSubmit={this.handleSubmit} className="ui form">
+                        <h1>Decision Searchr</h1>
+                        <p>What would you like to search for?</p>
+                        <input className="ui input focus" type="text" name="search_term" placeholder="What would you like to search for?" value={this.state.search_term} onChange={this.handleChange} />
+                        <p/>
                         <Button content="submit" onClick={this.handleSubmit}/>
                     </form>
+                    <h3>Try typing something into the search bar</h3>
                 </div>
-                {this.state.display == true ? <ResultCards case_numbers={this.state.case_numbers}/> : <h3>Try typing something into the search bar</h3>}   
+                {this.state.display == true ? <ResultCards case_numbers={this.state.case_numbers}/> : null}   
             </div>
         )
     }
